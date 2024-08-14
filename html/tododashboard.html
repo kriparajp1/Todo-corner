@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOcorner</title>
+    <link rel="stylesheet" href="todologin.css">
+</head>
+<body>
+    <!-- todo task style -->
+    <style>
+        .dash{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .todo-task-item {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .todo-task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .todo-task-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .todo-task-status {
+            width: 12px;
+            height: 12px;
+            background-color: #f0b429;
+            border-radius: 50%;
+        }
+        
+        .todo-task-body {
+            margin-top: 10px;
+        }
+        
+        .todo-task-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+        
+        .todo-task-action {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        
+        .todo-task-action.edit {
+            background-image: url('https://img.icons8.com/?size=100&id=59770&format=png&color=f0b429'); /* Replace with actual path */
+        }
+        
+        .todo-task-action.calendar {
+            background-image: url('https://img.icons8.com/?size=100&id=GlEOr5x0aJpH&format=png&color=f0b429'); /* Replace with actual path */
+        }
+        
+        .todo-task-action.more {
+            background-image: url('https://img.icons8.com/?size=100&id=33945&format=png&color=f0b429'); /* Replace with actual path */
+        }
+        
+        @media (max-width: 600px) {
+            .todo-task-item {
+                padding: 15px;
+            }
+        
+            .todo-task-title {
+                font-size: 18px;
+            }
+        
+            .todo-task-actions {
+                justify-content: center;
+            }
+        
+            .todo-task-action {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    </style>
+    <!-- todo addtask style -->
+     <style>
+        .todo-addtask-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .todo-addtask-form {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .todo-addtask-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .todo-addtask-status {
+            width: 12px;
+            height: 12px;
+            background-color: #f0b429;
+            border-radius: 50%;
+        }
+        
+        .todo-addtask-input, .todo-addtask-textarea {
+            width: calc(100% - 20px);
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #f0b429;
+            border-radius: 4px;
+            background-color: #333;
+            color: #e5e5e5;
+        }
+        
+        .todo-addtask-input:focus, .todo-addtask-textarea:focus {
+            outline: none;
+            border-bottom: 2px solid #e0a419;
+        }
+        
+        .todo-addtask-textarea {
+            resize: none;
+            height: 60px;
+        }
+        
+        .todo-addtask-options {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .todo-addtask-option {
+            background-color: #444;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            color: #e5e5e5;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .todo-addtask-option:hover {
+            background-color: #555;
+        }
+        
+        .todo-addtask-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .todo-addtask-action {
+            background-color: #f0b429;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .todo-addtask-action.cancel {
+            background-color: #444;
+            color: #e5e5e5;
+        }
+        
+        .todo-addtask-action:hover {
+            background-color: #e0a419;
+        }
+        
+        .todo-addtask-action.cancel:hover {
+            background-color: #555;
+        }
+        
+        @media (max-width: 600px) {
+            .todo-addtask-form {
+                padding: 15px;
+            }
+        
+            .todo-addtask-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .todo-addtask-option {
+                margin-bottom: 10px;
+            }
+        
+            .todo-addtask-actions {
+                justify-content: center;
+            }
+        
+            .todo-addtask-action {
+                margin: 10px 5px 0;
+            }
+        }
+     </style>
+    <div class="todocorner-container">
+        <header class="todocorner-header">
+            <h1 class="todocorner-title">your personalised todo site</h1>
+        </header>
+        <div class="todocorner-logo">
+                <img src="https://img.icons8.com/?size=100&id=61532&format=png&color=F0B429" alt="TODOcorner Logo">
+                TODOcorner
+            </div>
+        <main class="todocorner-main dash">
+            <!-- todo task -->
+            <div class="todo-task-item">
+                <div class="todo-task-header">
+                    <span class="todo-task-title">Task1</span>
+                    <div class="todo-task-status"></div>
+                </div>
+                <div class="todo-task-body">
+                    <p>I want go the x office at today 5pm</p>
+                    <div class="todo-task-actions">
+                        <span class="todo-task-action edit"></span>
+                        <span class="todo-task-action calendar"></span>
+                        <span class="todo-task-action more"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- ........ -->
+             <!-- todo add task -->
+             <div class="todo-addtask-container">
+                <div class="todo-addtask-form">
+                    <div class="todo-addtask-header">
+                        <div class="todo-addtask-status"></div>
+                    </div>
+                    <form>
+                        <input type="text" class="todo-addtask-input" placeholder="Task Name">
+                        <textarea class="todo-addtask-textarea" placeholder="Description..."></textarea>
+                        <div class="todo-addtask-options">
+                            <button type="button" class="todo-addtask-option">Today</button>
+                            <button type="button" class="todo-addtask-option">Custom Date</button>
+                            <button type="button" class="todo-addtask-option">Priority</button>
+                            <button type="button" class="todo-addtask-option">Remind Me</button>
+                        </div>
+                        <div class="todo-addtask-actions">
+                            <button type="button" class="todo-addtask-action cancel">Cancel</button>
+                            <button type="submit" class="todo-addtask-action add">Add Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+              <!-- ...... -->
+        </main>
+        <hr class="line-footer">
+        <footer class="todocorner-footer">
+            <div class="todo-footer">
+            <a href="#">About us</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact us</a>
+        </div>
+            <p>copyrighted by TODOcorner</p>
+        </footer>
+    </div>
+</body>
+</html>

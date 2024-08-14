@@ -1,0 +1,26 @@
+<%-include("header")%>
+<main class="todocorner-main">
+    <div class="todocorner-login">
+        <h2>Sign In</h2>
+        <form action="/" method="post">
+            <input type="text" class="todocorner-input" placeholder="username......." name="email">
+            <input type="password" class="todocorner-input" placeholder="password......." name="password">
+            <div>
+            <button type="submit" class="todocorner-button">LOGIN</button>
+             
+            </div>
+            
+        </form>
+        <hr class="signin-line">
+        <div class="todocorner-social-login">
+            <a href="/auth/google"><div class="todocorner-social-icon google"></div></a>
+            <div class="todocorner-social-icon github"></div>
+            <div class="todocorner-social-icon facebook"></div>
+        </div>
+        <p class="todocorner-signup">Already haven't account? <a class="logina" href="/signup">Signup</a></p>
+        <h3>or</h3>
+        <p class="todocorner-signup">you can enter with out login or signup</p>
+        <a href="/normalTodo"><button  class="todocorner-button " style="width: 6rem;">Click Here</button></a>   
+    </div>
+</main>
+<%-include("footer")%>

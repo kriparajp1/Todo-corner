@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+body {
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    background-color: #323437;
+    color: #929396;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #333;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #f0b42957;
+    border-radius: 10px;
+    border: 3px solid #333;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #e0a419;
+}
+
+.todocorner-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.todocorner-header {
+    position: fixed;
+    background-color: #f0b429;
+    height: 18px;
+    width: 100%;
+    padding: 4px 0px 5px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logina{
+    text-decoration: none;
+    color: #646669;
+}
+
+.todocorner-logo {
+    position: fixed;
+    margin: 2rem 0rem 0rem 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    align-self: baseline;
+    font-weight: bold;
+}
+.todocorner-logo img{
+    width: 3.1rem;
+}
+
+.todocorner-title {
+    font-size:0.7rem;
+    color: black;
+    margin: 0px 0px 0px 10px;
+}
+
+.todocorner-main {
+    margin: 0rem 0rem 7rem 0rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.todocorner-login {
+    border-style: solid;
+    background-color: #323437;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 301px;
+    border-color: #646669;
+}
+
+.todocorner-login h2 {
+    margin-top: 0;
+}
+
+.todocorner-input {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    height: 2rem;
+    border: 1px none #555;
+    border-radius: 8px;
+    background-color: #222;
+    color: #e5e5e5;
+}
+
+.todocorner-button {
+    width: calc(30% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #f0b429;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+
+.todocorner-social-login {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 2rem;
+}
+
+.todocorner-social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-size: cover;
+}
+
+.todocorner-social-icon.google {
+    background-image: url('https://img.icons8.com/?size=100&id=17950&format=png&color=929396'); /* Add the URL for the Google icon */
+}
+
+.todocorner-social-icon.github {
+    background-image: url('https://img.icons8.com/?size=100&id=12599&format=png&color=929396'); /* Add the URL for the GitHub icon */
+}
+
+.todocorner-social-icon.facebook {
+    background-image: url('https://img.icons8.com/?size=100&id=118467&format=png&color=929396'); /* Add the URL for the Facebook icon */
+}
+
+.todocorner-signup {
+    margin-top: 20px;
+}
+
+.todocorner-footer {
+    padding: 4px 0px 5px 0px;
+    gap: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    flex-direction: column;
+    margin: -10rem 0rem 0rem 0rem;
+}
+.todo-footer{
+    display: flex;
+    gap: 4rem;
+}
+
+.todocorner-footer a {
+    color: #f0b429;
+    text-decoration: none;
+}
+
+.todocorner-footer p {
+    margin: 0;
+}
+.line-footer{
+    width: 100%;
+    border: 1px solid #929396;
+}
+.signin-line{
+    width: 100%;
+    border: 1px solid #929396;
+}
+@media (max-width: 600px) {
+    .todocorner-login {
+        padding: 15px;
+    }
+
+    .todocorner-input, .todocorner-button {
+        width: calc(100% - 30px);
+    }
+}
+.swal2-popup {
+    background: rgba(0, 0, 0, 0.655) !important;
+    backdrop-filter: blur(2px);
+    border-radius: 1rem;
+  }
+  .swal2-title {
+    color: white;
+  }

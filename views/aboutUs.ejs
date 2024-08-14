@@ -1,0 +1,81 @@
+<%-include("header")%>
+<style>
+    .about-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    
+    .about-title {
+        font-size: 2em;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .about-welcome {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .about-subtitle {
+        font-size: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .about-features-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .about-feature-item {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    
+    .about-developer-info {
+        font-size: 1.2em;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .about-link{
+        text-decoration: none;
+        color: #e0a419;
+        font-weight: bold;
+    }
+    
+    .about-link:hover {
+        text-decoration: underline;
+    }
+    
+    .about-thank-you {
+        font-size: 1.2em;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+</style>
+<main class="todocorner-main">
+    <div class="about-container">
+        <h1 class="about-title">About Us</h1>
+        <p class="about-welcome">Welcome to TodoCorner, a personalized todo application developed by KriparajP. TodoCorner is designed to make managing your tasks simple and efficient, with a range of features to enhance your productivity.</p>
+        
+        <h2 class="about-subtitle">Key Features:</h2>
+        <ul class="about-features-list">
+            <li class="about-feature-item"><strong>Personalized Todo Lists:</strong> Create and manage your todo lists effortlessly. Each task can be prioritized to ensure you stay on top of what matters most.</li>
+            <li class="about-feature-item"><strong>Cross-Device Accessibility:</strong> By logging in, you can access your todos on any device, with all data securely stored in our MongoDB database.</li>
+            <li class="about-feature-item"><strong>Email Reminders:</strong> Never miss a deadline with our email reminder feature, which alerts you on the day of your task.</li>
+            <li class="about-feature-item"><strong>Guest Access:</strong> Use TodoCorner without logging in. Your todos will be saved on your device, allowing you to experience the app’s core features without creating an account.</li>
+            <li class="about-feature-item"><strong>Inspiration from Typing Monkey:</strong> Our clean and user-friendly design is inspired by the cool design of the Typing Monkey site, ensuring a pleasant user experience.</li>
+        </ul>
+        
+        <h2 class="about-subtitle">About the Developer:</h2>
+        <p class="about-developer-info">My name is KriparajP, and this project is a part of my portfolio. I am passionate about creating practical and user-friendly web applications. <a href="https://kriparajp.netlify.app/" class="about-link">Click here</a> to learn more about my work and other projects.</p>
+        
+        <p class="about-thank-you">Thank you for choosing TodoCorner. We hope it helps you stay organized and productive!</p>
+    </div>
+</main>
+<%-include("footer")%>
