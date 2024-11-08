@@ -4,8 +4,8 @@ const userModel=require("../model/userModel")
 
 
 passport.use(new GoogleStrategy({
-  clientID: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET,
+  clientID: "uyuhuuhgyguyghh",
+  clientSecret: "huhygygtdretrdytgh",
   callbackURL: "http://localhost:5555/auth/google/callback",
 },
 async (request, accessToken, refreshToken, profile, done) => {
