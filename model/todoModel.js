@@ -1,5 +1,5 @@
 const mongoose=require("mongoose")
-mongoose.connect("mongodb+srv://kriparaj331:DgKXvAygw895jufN@todo.7lqht.mongodb.net/?retryWrites=true&w=majority&appName=todo").then(()=>console.log("db connected successfully")).catch(()=>console.log("db not connected"))
+mongoose.connect("mongodb+srv://arjunsreechakram_db_user:jUu0vwXudbkNukk8@synxbooking.kbzh4p3.mongodb.net/?appName=synxbooking").then(()=>console.log("db connected successfully")).catch(()=>console.log("db not connected"))
 
 const schema = new mongoose.Schema({
     name: {
